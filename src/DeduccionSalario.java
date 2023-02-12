@@ -1,7 +1,7 @@
 public class DeduccionSalario {
     public static void main(String[] args) {
 
-        String caract = "3300.0";
+        double salario = 3300.0;
         double Ir;
 
         if (salario <= 2800) {
