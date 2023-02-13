@@ -1,7 +1,7 @@
 public class DeduccionSalario {
     public static void main(String[] args) {
 
-        String caract = "3300.0";
+        double salario = 3300.0;
         double Ir;
 
         if (salario <= 2800) {
@@ -14,6 +14,7 @@ public class DeduccionSalario {
             Ir = 22.5;
             System.out.println("su IR es " + Ir + " y la deduccion es de 3");
         }
+
         //fin condicion
 
         // Podemos usar el statement "switch" para evitar muchas condiciones encadenadas
