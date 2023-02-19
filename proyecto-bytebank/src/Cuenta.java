@@ -3,25 +3,29 @@ class Cuenta {
     double saldo;
     int agencia;
     int numero;
-    String titular;
+    Cliente titular; // Atributo que usamos para referenciar a la clase Cliente
 
     // Ahora definimos nuestros metodos para la clase
+    // no retorna nada
     public void depositar(double dinero) {
         //    This account        this account    this object
         this.saldo = this.saldo + dinero;
-    }//fin depositar()
+    }
 
     // Ahora el método retirar con Retorno , nos va a devolver un booleano en este caso para saber si fue exitoso el retiro
+    // no retorna nada
     public boolean retirar(double valor) {
         if (this.saldo >= valor) {
             this.saldo = this.saldo - valor;
             return true;
         }
         return false;
-    }//fin retirar()
+    }
 
     // Ahora el método transferir (), que recibe 2 parámetros el primero es la cantidad a transferir y el segundo es un objeto de tipo cuenta
     // que es a quien vamos a transferirle
+
+    // SI retorna
     public boolean transferir(double valor, Cuenta cuenta) {
 
         if (this.saldo >= valor) {
@@ -31,9 +35,9 @@ class Cuenta {
         }
         return false;
 
-    }//fin transferir()
+    }
 
-} // fin de la class Cuenta
+}
 
 // Instancias : son objetos que heredan de la clases sus atributos y metodos es decir su ESQUELETO
 
