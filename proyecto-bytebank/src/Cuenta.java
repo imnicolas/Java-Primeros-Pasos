@@ -1,14 +1,14 @@
 //entidad Cuenta :
 class Cuenta {
-    double saldo;
-    int agencia;
-    int numero;
+    private double saldo;
+    private int agencia;
+    private int numero;
     Cliente titular; // Atributo que usamos para referenciar a la clase Cliente
 
     // Ahora definimos nuestros metodos para la clase
     // no retorna nada
     public void depositar(double dinero) {
-        //    This account        this account    this object
+    //This account   this account    this object
         this.saldo = this.saldo + dinero;
     }
 
@@ -37,6 +37,43 @@ class Cuenta {
 
     }
 
+    // Getter
+    public double getSaldo() {
+        return this.saldo;
+    }
+
+    public int getAgencia() {
+        return agencia;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    // Setter
+    public void setAgencia(int agencia){
+        if(agencia > 0){
+            this.agencia = agencia ;
+        }else {
+            System.out.println("no estan permitidos valores negativos");
+        }
+    }
+
+    public void setSaldo(double saldo) {
+        if(saldo > 0){
+            this.saldo = saldo;
+        } else {
+            System.out.println("no estan permitidos valores negativos");
+        }
+    }
+
+    public void setNumero(int numero) {
+        if(numero > 0){
+            this.numero = numero;
+        }else {
+            System.out.println("no estan permitidos valores negativos");
+        }
+    } // En este caso, usamos el condicional en los setters, para controlar/ validar que sean valores positivos
 }
 
 // Instancias : son objetos que heredan de la clases sus atributos y metodos es decir su ESQUELETO
