@@ -3,12 +3,11 @@ class Cuenta {
     private double saldo;
     private int agencia;
     private int numero;
-    Cliente titular; // Atributo que usamos para referenciar a la clase Cliente
+    private Cliente titular; // Atributo que usamos para referenciar a la clase Cliente
 
     // Ahora definimos nuestros metodos para la clase
-    // no retorna nada
-    public void depositar(double dinero) {
-    //This account   this account    this object
+    public void depositar(double dinero) {     // NO retorna nada
+        //This account   this account    this object
         this.saldo = this.saldo + dinero;
     }
 
@@ -22,11 +21,9 @@ class Cuenta {
         return false;
     }
 
-    // Ahora el método transferir (), que recibe 2 parámetros el primero es la cantidad a transferir y el segundo es un objeto de tipo cuenta
-    // que es a quien vamos a transferirle
-
-    // SI retorna
-    public boolean transferir(double valor, Cuenta cuenta) {
+    // Ahora el método transferir (), que recibe 2 parámetros el primero es la cantidad a transferir y el segundo
+    // es un objeto de tipo cuenta que es a quien vamos a transferirle
+    public boolean transferir(double valor, Cuenta cuenta) { // SI retorna
 
         if (this.saldo >= valor) {
             this.saldo = this.saldo - valor;
@@ -37,7 +34,7 @@ class Cuenta {
 
     }
 
-    // Getter
+                    // Getter
     public double getSaldo() {
         return this.saldo;
     }
@@ -48,6 +45,10 @@ class Cuenta {
 
     public int getNumero() {
         return numero;
+    }
+
+    public Cliente getTitular() {
+        return titular;
     }
 
     // Setter
@@ -74,6 +75,10 @@ class Cuenta {
             System.out.println("no estan permitidos valores negativos");
         }
     } // En este caso, usamos el condicional en los setters, para controlar/ validar que sean valores positivos
+
+    public void setTitular(Cliente titular) {
+        this.titular = titular;
+    }
 }
 
 // Instancias : son objetos que heredan de la clases sus atributos y metodos es decir su ESQUELETO

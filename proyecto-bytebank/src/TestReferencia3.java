@@ -9,8 +9,8 @@ public class TestReferencia3 {
 
         Cuenta cuentaDeBelkis = new Cuenta();
         cuentaDeBelkis.titular = new Cliente();
-        cuentaDeBelkis.titular.nombre = "Belkis";
-        System.out.println(cuentaDeBelkis.titular.nombre);
+        cuentaDeBelkis.titular.setNombre("Belkis");
+        System.out.println(cuentaDeBelkis.titular.getNombre());
 
     }
 }

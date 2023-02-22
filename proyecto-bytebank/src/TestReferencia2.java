@@ -3,13 +3,13 @@ public class TestReferencia2 {
     public static void main(String[] args) {
 // Creamos un objeto nuevo de tipo Cliente
         Cliente nicolas = new Cliente();
-        nicolas.nombre = "Nicolás";
-        nicolas.documento = "37431955";
-        nicolas.telefono = "1500000";
+        nicolas.setNombre("Nicolás");
+        nicolas.setDocumento("37431955");
+        nicolas.setTelefono("1500");
 // Creamos un objeto nuevo de tipo Cuenta
         Cuenta cuentaDeNicolas = new Cuenta();
         cuentaDeNicolas.titular = nicolas ; // Referencia de cuentaDeNicolas -> nicolas
-        System.out.println(cuentaDeNicolas.titular.nombre);
+        System.out.println(cuentaDeNicolas.titular.getNombre());
     }
 }
 
