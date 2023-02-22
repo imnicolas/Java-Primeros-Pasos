@@ -6,6 +6,11 @@ class Cuenta {
     private Cliente titular; // Atributo que usamos para referenciar a la clase Cliente
 
     // Ahora definimos nuestros metodos para la clase
+
+    public void agregotitular (Cliente nombreTitular){
+        this.titular = nombreTitular ;
+    }
+
     public void depositar(double dinero) {     // NO retorna nada
         //This account   this account    this object
         this.saldo = this.saldo + dinero;

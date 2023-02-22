@@ -8,9 +8,9 @@ public class TestReferencia3 {
             // El output acá, es un exception. Porque titular = null -> exception . . . (despues de null el resto es exception)
 
         Cuenta cuentaDeBelkis = new Cuenta();
-        cuentaDeBelkis.titular = new Cliente();
-        cuentaDeBelkis.titular.setNombre("Belkis");
-        System.out.println(cuentaDeBelkis.titular.getNombre());
+        cuentaDeBelkis.setTitular(new Cliente());
+        cuentaDeBelkis.getTitular().setNombre("Belkis");
+        System.out.println(cuentaDeBelkis.getTitular().getNombre());
 
     }
 }

@@ -8,8 +8,8 @@ public class TestReferencia2 {
         nicolas.setTelefono("1500");
 // Creamos un objeto nuevo de tipo Cuenta
         Cuenta cuentaDeNicolas = new Cuenta();
-        cuentaDeNicolas.titular = nicolas ; // Referencia de cuentaDeNicolas -> nicolas
-        System.out.println(cuentaDeNicolas.titular.getNombre());
+        cuentaDeNicolas.agregotitular(nicolas) ; // Referencia de cuentaDeNicolas -> nicolas
+        System.out.println(cuentaDeNicolas.getTitular().getNombre());
     }
 }
 
