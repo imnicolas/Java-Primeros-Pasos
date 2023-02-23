@@ -74,6 +74,10 @@ class Cuenta {
         return titular;
     }
 
+    public static int getTotal(){
+        return Cuenta.total;
+    }
+
     // Setter
     public void setAgencia(int agencia){
         if(agencia > 0){
@@ -102,6 +106,11 @@ class Cuenta {
     public void setTitular(Cliente titular) {
         this.titular = titular;
     }
+
+    public static void setTotal(int total){
+        Cuenta.total = total ;
+    }
+
 }
 
 // Instancias : son objetos que heredan de la clases sus atributos y metodos es decir su ESQUELETO
