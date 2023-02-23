@@ -5,6 +5,8 @@ class Cuenta {
     private int numero;
     private Cliente titular; // Atributo que usamos para referenciar a la clase Cliente
 
+    private static int total = 0 ; // variable estática, solo accesible por la Clase
+
     // Desde el constructor, manipulamos los nuevos objetos desde su nacimiento. Validar, inicializar atributos, etc ...
     public Cuenta(int agencia){ // Como argumento podemos usar una variable por "lógica de negocio" por ejemplo, en cada instancia
         // de nuestra clase podriamos indicar como párametro que valor va a tenér nuestro objeto.
@@ -15,6 +17,9 @@ class Cuenta {
         }else {
             this.agencia = agencia;
         }
+        total++;
+        System.out.println("EL total de las cuentas es : "+ total); // la usamos como contador, para confirmar la cantidad
+        // de objetos que tenemos.
     }
 
 
