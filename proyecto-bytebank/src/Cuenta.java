@@ -5,6 +5,19 @@ class Cuenta {
     private int numero;
     private Cliente titular; // Atributo que usamos para referenciar a la clase Cliente
 
+    // Desde el constructor, manipulamos los nuevos objetos desde su nacimiento. Validar, inicializar atributos, etc ...
+    public Cuenta(int agencia){ // Como argumento podemos usar una variable por "lógica de negocio" por ejemplo, en cada instancia
+        // de nuestra clase podriamos indicar como párametro que valor va a tenér nuestro objeto.
+
+        if (agencia <= 0 ){
+            System.out.println("No se permite 0");
+            this.agencia = 1 ; // si creamos un objeto nuevo agencia.value = 1 por default .
+        }else {
+            this.agencia = agencia;
+        }
+    }
+
+
     // Ahora definimos nuestros metodos para la clase
 
     public void agregotitular (Cliente nombreTitular){

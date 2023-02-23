@@ -7,7 +7,7 @@ public class TestReferencia2 {
         nicolas.setDocumento("37431955");
         nicolas.setTelefono("1500");
 // Creamos un objeto nuevo de tipo Cuenta
-        Cuenta cuentaDeNicolas = new Cuenta();
+        Cuenta cuentaDeNicolas = new Cuenta(23);
         cuentaDeNicolas.agregotitular(nicolas) ; // Referencia de cuentaDeNicolas -> nicolas
         System.out.println(cuentaDeNicolas.getTitular().getNombre());
     }

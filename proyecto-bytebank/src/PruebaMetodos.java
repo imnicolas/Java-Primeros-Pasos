@@ -2,7 +2,7 @@ public class PruebaMetodos {
 
     public static void main(String[] args) {
 // Ahora usamos el primer metodo depositar, en una nueva instancia de la clase Cuenta
-        Cuenta cuenta = new Cuenta();
+        Cuenta cuenta = new Cuenta(19);
         cuenta.setSaldo(300);
         cuenta.depositar(200);
         System.out.println(cuenta.getSaldo());
@@ -10,7 +10,7 @@ public class PruebaMetodos {
         cuenta.retirar(50);
         System.out.println(cuenta.getSaldo());
 
-        Cuenta cuentaDeBelkis = new Cuenta(); // 2da Cuenta para usar el metodo transferir ()
+        Cuenta cuentaDeBelkis = new Cuenta(21); // 2da Cuenta para usar el metodo transferir ()
         cuentaDeBelkis.depositar(1000);
         boolean puedeTransferir = cuentaDeBelkis.transferir(400, cuenta);
         if (puedeTransferir) {

@@ -2,7 +2,7 @@ public class PruebaAcceso {
 
     public static void main(String[] args) {
 
-        Cuenta cuenta = new Cuenta();
+        Cuenta cuenta = new Cuenta(16);
         cuenta.retirar(300);
 
         System.out.println(cuenta.getSaldo()); // Output -> 0.0 porque retirar() = false
@@ -12,7 +12,7 @@ public class PruebaAcceso {
         // por afuera de ella .. Entonces necesitamos que sus atributos sean privados / private.
 
         // Aca , método Getter ..
-        Cuenta cuenta2 = new Cuenta();
+        Cuenta cuenta2 = new Cuenta(17);
         cuenta2.depositar(500);
         cuenta2.retirar(300);
 

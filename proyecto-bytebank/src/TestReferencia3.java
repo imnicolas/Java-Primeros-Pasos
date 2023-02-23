@@ -2,12 +2,12 @@ public class TestReferencia3 {
 
     public static void main(String[] args) {
 
-        Cuenta cuentaDeNicolas = new Cuenta();
+        Cuenta cuentaDeNicolas = new Cuenta(12);
         // cuentaDeNicolas.titular.nombre = "Nicolas";
         // System.out.println(cuentaDeNicolas.titular.nombre);
             // El output acá, es un exception. Porque titular = null -> exception . . . (despues de null el resto es exception)
 
-        Cuenta cuentaDeBelkis = new Cuenta();
+        Cuenta cuentaDeBelkis = new Cuenta(13);
         cuentaDeBelkis.setTitular(new Cliente());
         cuentaDeBelkis.getTitular().setNombre("Belkis");
         System.out.println(cuentaDeBelkis.getTitular().getNombre());

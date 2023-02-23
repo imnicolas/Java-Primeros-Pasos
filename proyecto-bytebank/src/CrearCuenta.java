@@ -2,7 +2,7 @@ public class CrearCuenta {
 
     public static void main(String[] args) {
 
-        Cuenta primeraCuenta = new Cuenta() ;// new Cuenta (), significa guardame espacio en memoria para este objeto
+        Cuenta primeraCuenta = new Cuenta(11) ;// new Cuenta (), significa guardame espacio en memoria para este objeto
         primeraCuenta.setSaldo(1000);
         //primeraCuenta.pais("Argentina"); no compila, el atributo pais no existe en la clase Cuenta.
         System.out.println(primeraCuenta.getSaldo());
@@ -10,7 +10,7 @@ public class CrearCuenta {
         //el objetos son una agrupacion de datos (atributos/metodos) ;
         // --------------------------------
         // Creamos una 2da Cuenta (Notamos que la primerCuenta y la segundaCuenta son INDEPENDIENTES entre si
-        Cuenta segundaCuenta = new Cuenta() ;
+        Cuenta segundaCuenta = new Cuenta(14) ;
         segundaCuenta.setSaldo(2000);
         System.out.println(segundaCuenta.getSaldo());
     }

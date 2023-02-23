@@ -1,10 +1,10 @@
 public class PracticoReferencias {
     public static void main(String[] args) {
 
-        Cuenta nicoCuenta = new Cuenta () ;
+        Cuenta nicoCuenta = new Cuenta (111) ;
         nicoCuenta.setAgencia(10);
 
-        Cuenta belkisCuenta = new Cuenta() ;
+        Cuenta belkisCuenta = new Cuenta(1111) ;
         belkisCuenta.setAgencia(100);
         belkisCuenta.setAgencia(1212321);
 
@@ -25,7 +25,7 @@ public class PracticoReferencias {
         System.out.println("nico "+nicoCuenta.getAgencia()); // Output = nico 1
 
             // EJEMPLO :
-        Cuenta ejemplo = new Cuenta () ;
+        Cuenta ejemplo = new Cuenta (15) ;
         ejemplo.setAgencia(100);
 
         Cuenta ejemplo2 = ejemplo ;
