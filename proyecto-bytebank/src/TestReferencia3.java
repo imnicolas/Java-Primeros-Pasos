@@ -12,6 +12,12 @@ public class TestReferencia3 {
         cuentaDeBelkis.getTitular().setNombre("Belkis");
         System.out.println(cuentaDeBelkis.getTitular().getNombre());
 
+
+        Cuenta cuentaDeNico = new Cuenta(200); // Ahora con el atributo titular = new Cliente()
+        System.out.println(cuentaDeNico.getTitular().getNombre()); // Output -> null . default value = null ;
+        cuentaDeNico.getTitular().setNombre("jose");
+        System.out.println(cuentaDeNico.getTitular().getNombre()); // Output -> jose .
+
     }
 }
 

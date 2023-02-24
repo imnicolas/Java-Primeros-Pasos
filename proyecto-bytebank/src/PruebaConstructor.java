@@ -6,23 +6,11 @@ public class PruebaConstructor {
         Cuenta cuenta1 = new Cuenta(88);
         Cuenta cuenta2 = new Cuenta(55);
         Cuenta cuenta3 = new Cuenta(22);
-                            // Cuenta.total= 0; Output -> .total has private access in Cuenta.
-        Cuenta.setTotal(20);// Output -> 20 . Que paso? nuestro set esta declarado de manera static por eso podemos
+        // Cuenta.total= 0; Output -> .total has private access in Cuenta.
+        // Importante: Nos aseguramos que no se pueda modificar al valor de la variable total, referenciando getTotal() -> Cuenta.total ;
+        // Cuenta.setTotal(20); Output -> 20 . Que paso? nuestro set esta declarado de manera static por eso podemos
                             // acceder a nuestra variable total desde nuestra Clase.
                             // ATENCION : los métodos get y set dependen de la lógica de negocio de cada proyecto .
-        // System.out.println(Cuenta.getTotal());
-
-        Cliente nico = new Cliente();
-        Cuenta nicolas = new Cuenta(100);
-        nico.setNombre("nicolas");
-        nicolas.setAgencia(20);
-        nicolas.setNumero(30);
-        nicolas.setSaldo(40.0);
-
-        //System.out.println("titular nuevo :" + nicolas.getTitular().getNombre());
-        System.out.println("su saldo es :" + nicolas.getSaldo());
-        System.out.println("su agencia es :" + nicolas.getAgencia());
-        System.out.println("su numero es :" + nicolas.getNumero());
     }
 }
 // *Referencia

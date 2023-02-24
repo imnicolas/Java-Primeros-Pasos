@@ -3,19 +3,19 @@ class Cuenta {
     private double saldo;
     private int agencia;
     private int numero;
-    private Cliente titular; // Atributo que usamos para referenciar a la clase Cliente
+    private Cliente titular = new Cliente(); // Cada vez que creamos un objeto Cuenta. titular va a crear un objeto Cliente
 
-    private static int total = 0 ; // variable estática, solo accesible por la Clase (vive dentro de la Clase)
+    private static int total = 0; // variable estática, solo accesible por la Clase (vive dentro de la Clase)
 
     // Desde el constructor, manipulamos los nuevos objetos desde su nacimiento. Validar, inicializar atributos, etc ...
-    public Cuenta(int agencia){
+    public Cuenta(int agencia) {
         // Como argumento podemos usar una variable por "lógica de negocio" por ejemplo, en cada instancia
         // de nuestra clase podriamos indicar como párametro que valor va a tener nuestro objeto.
 
-        if (agencia <= 0 ){
+        if (agencia <= 0) {
             System.out.println("No se permite 0");
-            this.agencia = 1 ; // si creamos un objeto nuevo agencia.value = 1 por default .
-        }else {
+            this.agencia = 1; // si creamos un objeto nuevo agencia.value = 1 por default .
+        } else {
             this.agencia = agencia;
         }
         //total++;
@@ -26,8 +26,8 @@ class Cuenta {
 
     // Ahora definimos nuestros metodos para la clase
 
-    public void agregotitular (Cliente nombreTitular){
-        this.titular = nombreTitular ;
+    public void agregotitular(Cliente nombreTitular) {
+        this.titular = nombreTitular;
     }
 
     public void depositar(double dinero) {     // NO retorna nada
@@ -58,7 +58,7 @@ class Cuenta {
 
     }
 
-                    // Getter
+    // Getter
     public double getSaldo() {
         return this.saldo;
     }
@@ -75,21 +75,21 @@ class Cuenta {
         return titular;
     }
 
-    public static int getTotal(){
+    public static int getTotal() {
         return Cuenta.total;
-    }
+    } // Ausencia del this. porque static referencia a la Clase. NO a la instancia !
 
     // Setter
-    public void setAgencia(int agencia){
-        if(agencia > 0){
-            this.agencia = agencia ;
-        }else {
+    public void setAgencia(int agencia) {
+        if (agencia > 0) {
+            this.agencia = agencia;
+        } else {
             System.out.println("no estan permitidos valores negativos");
         }
     }
 
     public void setSaldo(double saldo) {
-        if(saldo > 0){
+        if (saldo > 0) {
             this.saldo = saldo;
         } else {
             System.out.println("no estan permitidos valores negativos");
@@ -97,9 +97,9 @@ class Cuenta {
     }
 
     public void setNumero(int numero) {
-        if(numero > 0){
+        if (numero > 0) {
             this.numero = numero;
-        }else {
+        } else {
             System.out.println("no estan permitidos valores negativos");
         }
     } // En este caso, usamos el condicional en los setters, para controlar/ validar que sean valores positivos
@@ -108,8 +108,8 @@ class Cuenta {
         this.titular = titular;
     }
 
-    public static void setTotal(int total){
-        Cuenta.total = total ;
+    public static void setTotal(int total) {
+        Cuenta.total = total;
     }
 
 }
