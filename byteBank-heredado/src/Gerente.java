@@ -20,15 +20,15 @@ public class Gerente extends Funcionario {
     }
 
     public double getBonificacion(){
-        return super.getSalario(); // super && super() nos sirve para acceder a los metodos de la Clase padre y a su constructor si asi lo necesitamos
+        return super.getBonificacion() + super.getSalario(); // super && super() nos sirve para acceder a los metodos de la Clase padre y a su constructor si asi lo necesitamos
     }
 }
 
 
 // HERENCIA:
-//A) Hereda todas las características de la Funcionario.
+//A) Hereda todas las características de la Clase Funcionario.
 //
-//B) Hereda to do el comportamiento de clase Funcionario.
+//B) Hereda to do el comportamiento de Clase Funcionario.
 //
 //C) Gerente es un Funcionario
 

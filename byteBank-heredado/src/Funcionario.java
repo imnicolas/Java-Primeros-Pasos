@@ -5,8 +5,7 @@ public class Funcionario {
     private double salario;
 
     public Funcionario (){
-        //metodo del mismo tipo de retorno de la Clase que puede o no asignar
-        // parametros para asignarlos a nuestras variables de Clase
+        // Constructor, que retorna tipo Funcionario
     }
 
     public String getNombre() {
@@ -34,7 +33,7 @@ public class Funcionario {
     }
 
     public double getBonificacion(){
-            return this.salario * 0.1;
-    }
+            return this.salario * 0.05;
+    }// 5% de bonificacion
 
 }
