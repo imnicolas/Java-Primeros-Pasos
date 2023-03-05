@@ -6,7 +6,7 @@ public class TestGerente {
         gerente2.setSalario(6000);
         gerente2.setClave("1234");
 
-        Funcionario jorge = new Funcionario();
+        Funcionario jorge = new Gerente();
         jorge.setSalario(3000);
         System.out.println(jorge.getBonificacion()+" JORGE BONIF"); // 10% del salario
 

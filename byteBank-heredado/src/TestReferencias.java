@@ -4,7 +4,7 @@ public class TestReferencias {
 
         // Ejemplo : si instanciara un Gerente de tipo Funcionario
         //                      SI porque el elemento mas generico puede ser adaptado al mas especifico 
-        Funcionario funcionario = new Funcionario();
+        Funcionario funcionario = new Contador();
         funcionario.setNombre("nicolas");
 
         Gerente gerente = new Gerente();

@@ -1,11 +1,11 @@
 //entidad Cuenta :
-class Cuenta {
-    private double saldo;
-    private int agencia;
+public abstract class Cuenta {
+    protected double saldo;
+    private int agencia=1;
     private int numero;
     private Cliente titular = new Cliente(); // Cada vez que creamos un objeto Cuenta. titular va a crear un objeto Cliente
 
-    private static int total = 0; // variable estática, solo accesible por la Clase (vive dentro de la Clase)
+    private static int total ; // variable estática, solo accesible por la Clase (vive dentro de la Clase)
 
 
     // Desde el constructor, manipulamos los nuevos objetos desde su nacimiento. Validar, inicializar atributos, etc ...
@@ -20,7 +20,6 @@ class Cuenta {
             this.agencia = agencia;
         }
         //total++;
-        //System.out.println("EL total de las cuentas es : "+ total);
         //la variable total la usamos como contador, para confirmar la cantidad de objetos que tenemos.
     }
 
@@ -31,10 +30,10 @@ class Cuenta {
         this.titular = nombreTitular;
     }
 
-    public void depositar(double dinero) {     // NO retorna nada
-        //This account   this account    this object
-        this.saldo = this.saldo + dinero;
-    }
+    public abstract void depositar(double dinero); //{      NO retorna nada
+//        This account   this account    this object
+//        this.saldo = this.saldo + dinero;
+//    }
 
     // Ahora el método retirar con Retorno , nos va a devolver un booleano en este caso para saber si fue exitoso el retiro
     // no retorna nada
