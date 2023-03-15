@@ -10,6 +10,6 @@ public class SistemaInterno {
             System.out.println("can't log in");
             return false;
         }
-    } // end method
+    }
 
 }

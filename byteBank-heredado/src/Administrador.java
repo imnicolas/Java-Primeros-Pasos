@@ -20,8 +20,4 @@ public class Administrador extends Funcionario implements Autenticable{
         return this.util.iniciarSesion(clave);
     }
 
-    @Override
-    public boolean autenticar(String contraseña) {
-        return false;// TODO
-    }
 }

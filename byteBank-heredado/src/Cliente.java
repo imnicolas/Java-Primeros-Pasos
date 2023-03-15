@@ -36,7 +36,7 @@ public class Cliente implements Autenticable{
 
     @Override
     public void setClave(String clave) {
-        this.clave = clave;
+        this.util.setClave(clave);
     }
 
     @Override
@@ -44,8 +44,4 @@ public class Cliente implements Autenticable{
         return this.util.iniciarSesion(clave);
     }
 
-    @Override
-    public boolean autenticar(String contraseña) {
-        return false;// TODO
-    }
 }

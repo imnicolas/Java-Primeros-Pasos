@@ -3,6 +3,12 @@
 //         Hereda       de      Funcionario
 public class Gerente extends Funcionario implements Autenticable {
 
+    private AutenticacionUtil util ;
+
+    public Gerente(){
+        this.util = new AutenticacionUtil();
+    }
+
     public double getBonificacion(){
         System.out.println("ejecutando desde Gerente");
         return 2000 ;
@@ -12,18 +18,15 @@ public class Gerente extends Funcionario implements Autenticable {
 
     @Override
     public void setClave(String clave) {
-        // TODO
+        this.util.setClave(clave);
     }
 
     @Override
     public boolean iniciarSesion(String clave) {
-        return false; // TODO
+
+        return this.util.iniciarSesion(clave);
     }
 
-    @Override
-    public boolean autenticar(String contraseña) {
-        return false; // TODO
-    }
 }
 
 

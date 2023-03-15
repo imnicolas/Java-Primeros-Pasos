@@ -4,6 +4,4 @@ public interface Autenticable {
 
     public boolean iniciarSesion(String clave);
 
-    public boolean autenticar(String contraseña);
-
 }
