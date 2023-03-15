@@ -1,26 +1,28 @@
 
 
 //         Hereda       de      Funcionario
-public class Gerente extends Funcionario {
-    private String clave;
-    public void setClave(String clave){
-        this.clave = clave;
-    }
-
-    public boolean iniciarSesion(String clave){
-        return clave == "1234";
-    }
-
-    public boolean autenticar(String contraseña){
-        if(this.clave == contraseña){
-            return true;
-        }else{
-            return false;
-        }
-    }
+public class Gerente extends Funcionario implements Autenticable {
 
     public double getBonificacion(){
-        return super.getBonificacion() + super.getSalario(); // super && super() nos sirve para acceder a los metodos de la Clase padre y a su constructor si asi lo necesitamos
+        System.out.println("ejecutando desde Gerente");
+        return 2000 ;
+        // super && super() nos sirve para acceder a los atributos/metodos
+        // de la Clase padre y a su constructor si asi lo necesitamos
+    }
+
+    @Override
+    public void setClave(String clave) {
+        // TODO
+    }
+
+    @Override
+    public boolean iniciarSesion(String clave) {
+        return false; // TODO
+    }
+
+    @Override
+    public boolean autenticar(String contraseña) {
+        return false; // TODO
     }
 }
 
