@@ -1,4 +1,4 @@
-public class MiExcepcion  extends RuntimeException{
+public class MiExcepcion  extends Exception{ // Excepcion Checked (verificada) por el programador.
     public MiExcepcion(){
         super();
     }
