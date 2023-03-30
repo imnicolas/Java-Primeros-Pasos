@@ -16,7 +16,7 @@ public class TestGerente {
         esteban.getBonificacion();
         System.out.println(esteban.getBonificacion()+" ES la bonif MIA"); // 100% del salario
 
-        boolean autentico = gerente2.autenticar("1234");
+        boolean autentico = gerente2.iniciarSesion("1234");
 
         System.out.println(gerente2.getBonificacion()+" Bonificacion del gerente");
         System.out.println(gerente2.iniciarSesion("1234"));

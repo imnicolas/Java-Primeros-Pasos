@@ -5,9 +5,9 @@ public class CuentaCorriente extends Cuenta{
     }
 
     @Override // Sobre escritura de metodo : La firma no puede cambiar es decir solo podemos modificar el bloque de código, de otra forma no es Override
-    public boolean saca(double valor) {
+    public void saca(double valor) throws SaldoInsuficienteException {
         double comision = 0.2;
-        return super.saca(valor+comision);
+        super.saca(valor+comision);
     }
 
     @Override

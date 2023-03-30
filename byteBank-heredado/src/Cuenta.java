@@ -50,18 +50,21 @@ public abstract class Cuenta {
     public boolean transferir(double valor, Cuenta cuenta) { // SI retorna
 
         if (this.saldo >= valor) {
-            this.saca(valor);
+            try {
+                this.saca(valor);
+            }catch (SaldoInsuficienteException saldo){
+                saldo.printStackTrace();
+            }
             cuenta.depositar(valor);
             return true;
         }
         return false;
     }
-    public boolean saca (double valor){
-        if(this.saldo > valor){
-            this.saldo -= valor ;
-            return true;
+    public void saca (double valor) throws SaldoInsuficienteException{ // Quien quiera que reciba este metodo preparate porque vas a recibir una bomba!
+        if (this.saldo < valor){
+            throw new SaldoInsuficienteException("no tienes dinero suficiente");
         }
-        return false;
+            this.saldo -= valor ;
     }
 
     // Getter
