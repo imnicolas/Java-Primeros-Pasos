@@ -1,5 +1,7 @@
 package br.com.alura;
 
+import br.com.Model.Curso;
+
 import java.util.ArrayList;
 
 public class Ejemplo4 {

@@ -1,5 +1,7 @@
 package br.com.alura;
 
+import br.com.Model.Curso;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
